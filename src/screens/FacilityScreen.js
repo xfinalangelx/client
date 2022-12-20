@@ -182,7 +182,7 @@ function FacilityScreen() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="grid grid-cols-4 gap-2 mx-4">
         {loading ? (
           <Loader></Loader>
         ) : error.length > 0 ? (
@@ -190,7 +190,7 @@ function FacilityScreen() {
         ) : (
           facilities.map((x) => {
             return (
-              <div className="p-3">
+              <div className="">
                 <Facility
                   Facility={
                     x

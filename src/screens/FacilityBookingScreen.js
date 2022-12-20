@@ -13,20 +13,13 @@ function FacilityBookingScreen({ match }) {
   const [totalhours, settotalhours] = useState(0);
   const img = require("../assets/img/FYP LR Presentation.png");
 
-  const facilityid = match.params.facilityid;
   const fromtime = moment(match.params.fromtime, "YYYY-MM-DDTHH:mm");
   const totime = moment(match.params.totime, "YYYY-MM-DDTHH:mm");
   const myArray = fromtime._i.split("T");
   const uArray = totime._i.split("T");
   let date = myArray[0];
-  console.log(date)
   let from = myArray[1];
   let to = uArray[1];
-
-  from = from.slice(0,-2);
-  to = to.slice(0,-2);
-  console.log(from)
-  console.log(to)
 
 
   useEffect(() => {

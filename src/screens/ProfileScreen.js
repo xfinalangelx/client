@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Tabs } from "antd";
 import { Tag } from "antd";
-
 import MyBookingScreen from "./MyBookingScreen";
+import FacilityBookingScreen from './MyFacilityBookingScreen';
 const { TabPane } = Tabs;
 const collins = require('../assets/img/FYP LR Presentation.png')
 
@@ -39,12 +39,15 @@ function ProfileScreen() {
             </span>
 
             <span class="mt-8 flex justify-end">
-             <img src={collins} alt="collins" class="w-[30%]"/>
+              <img src={collins} alt="collins" class="w-[30%]" />
             </span>
           </div>
         </TabPane>
         <TabPane tab="Booking" key="2">
           <MyBookingScreen></MyBookingScreen>
+        </TabPane>
+        <TabPane tab="Facility Booking" key="3">
+          <FacilityBookingScreen></FacilityBookingScreen>
         </TabPane>
       </Tabs>
     </div>
